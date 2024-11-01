@@ -6,61 +6,126 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Karla:ital,wght@0,200..800;1,200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Young+Serif&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Contact form</title>
   <link rel="stylesheet" href="style.css">
   
 </head>
 <body>
-  <div class="contact_container">
-    <div class="form_header">
-      Contact Us
+  <div class="contact-form">
+    <div class="contact_container">
+      <div class="form_header">
+        Contact Us
+      </div>
+      
+      <div class="name-field">
+        <div class="first-name-field">
+          <div class="field_title">
+            First Name
+          </div>
+          <div class="form-entry-text">
+            <input type="text" id="fname_text" class="text-input name-text">
+          </div>
+          <div class="field-warning fname_warning hidden">
+            This field is required
+          </div>
+        </div>
+          
+        <div class="last-name-field">
+          <div class="field_title">
+            Last Name
+          </div>
+          <div class="form-entry-text">
+            <input type="text" id="lname_text" class="text-input name-text">
+          </div>
+          <div class="field-warning lname_warning hidden">
+            This field is required
+          </div>
+        </div>
+        
+      </div>
+      
+
+      <div class="email-field">
+        <div class="field_title">
+          Email Address
+        </div>
+        <div class="form-entry-text">
+          <input type="text" id="email_text" class="text-input">
+        </div>
+        <div class="field-warning field-warning-email hidden">
+          Please enter a valid email address
+        </div>
+        <div class="field-warning field-warning-email2 hidden">
+          This field is required
+        </div>
+      </div>
+      
+
+      <div class="query-field">
+        <div class="field_title">
+          Query Type
+        </div>
+        <div class="radio-container">
+          <div class="radio-selector">
+            <input type="radio" name="radio1" id="General-Enquiry">
+            <label for="General-Enquiry">General Enquiry</label>
+          </div>
+  
+          <div class="radio-selector">
+            <input type="radio" name="radio1" id="Support-Request"> 
+            <label for="Support-Request">Support Request</label>  
+          </div>
+        </div>
+        <div class="field-warning hidden">
+          Please select a query type
+        </div>
+      </div>
+      
+
+      <div class="message-field">
+        <div class="field_title">
+          Message
+        </div>
+        <form class="form-entry-text">
+          <textarea class="text-input message-text"></textarea>
+        </form>
+
+        <!-- <div class="form-entry-text">
+          <input type="text" id="name_text" class="text-input message-text">
+        </div> -->
+        <div class="field-warning hidden">
+          This field is required
+        </div>
+      </div>
+      
+      <div class="consent-field">
+        <div class="form-consent">
+          <input type="checkbox" name="consent" id="consent">
+          <label for="consent">I consent to being contacted by the team</label>
+          
+        </div>
+        <div class="field-warning hidden">
+          To submit this form, please consent to being contacted
+        </div>
+      </div>
+      
+
+      <button class="submit-button">Submit</button>
+
     </div>
-    <div class="field_title">
-      First Name
+    
+    <script src="myscript.js" defer></script>
+
+    <div class="alert_message hidden">
+      <p><img src="assets/images/icon-success-check.svg" alt="">Message Sent!</p>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>  
     </div>
-    <div class="field-warning">
-      This field is required
-    </div>
-    <div class="field_title">
-      Last Name
-    </div>
-    <div class="field-warning">
-      This field is required
-    </div>
-    <div class="field_title">
-      Email Address
-    </div>
-    <div class="field-warning-email">
-      Please enter a valid email address
-    </div>
-    <div class="field-warning">
-      This field is required
-    </div>
-    <div class="field_title">
-      Query Type
-    </div>
-    General Enquiry
-    Support Request
-    <div class="field-warning">
-      Please select a query type
-    </div>
-    <div class="field_title">
-      Message
-    </div>
-    <div class="field-warning">
-      This field is required
-    </div>
-    <div class="form-consent">
-      I consent to being contacted by the team
-    </div>
-    <div class="field-warning">
-      To submit this form, please consent to being contacted
-    </div>
-    <button>Submit</button>
-  </div>
-  <div class="alert_message">
-    Message Sent!
-    Thanks for completing the form. We'll be in touch soon!
+
+    
   </div> 
 </body>
 </html>
