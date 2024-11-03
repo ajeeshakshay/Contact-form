@@ -138,3 +138,22 @@ button:hover{
 .hidden{
     display: none;;
 }
+
+@media(max-width: 600px){
+    .contact_container{
+        width: 90%;
+        min-width: 300px;
+    }
+    .name-field {
+        display: flex;
+        flex-direction: column;
+        margin: 0.8rem 0 0.8rem 0;
+    }
+    .first-name-field{
+        width: 100%;
+    }
+    
+    .last-name-field{
+        width: 100%;
+    }
+}
