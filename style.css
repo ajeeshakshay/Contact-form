@@ -77,6 +77,9 @@ body{
     width: 49%;
     font-size: 0.9rem;
 }
+.radio-selector label{
+    padding-left: 4px;
+}
 
 .contact_container{
     margin-top: 4rem;
