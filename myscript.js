@@ -12,11 +12,13 @@ const fieldWarningEmail1 = document.querySelector(".field-warning-email");
 const alertMessage = document.querySelector(".alert_message");
 
 const fieldWarningRadio = document.querySelector(".field-warning-radio")
+const fieldWarningConsent = document.querySelector(".field-warning-consent");
 
 let isfname=true;
 let islname=true;
 let isemail=true;
 let isradio=true;
+let isconsent=true;
 
 const validateEmail = (email) => {
     return String(email)
@@ -78,8 +80,17 @@ submitButton.addEventListener("click",function(){
         fieldWarningRadio.classList.add("hidden")
         isradio=true
     }
+
+    if(!document.getElementById('consent').checked) {
+        fieldWarningConsent.classList.remove("hidden")
+        isconsent=false
+    }
+    else{
+        fieldWarningConsent.classList.add("hidden")
+        isconsent=true
+    }
         
-    if(isfname && islname && isemail && isradio)
+    if(isfname && islname && isemail && isradio && isconsent)
         {
             alertMessage.classList.remove("hidden");
             setTimeout(function () {
